@@ -1,20 +1,42 @@
 <html>
     <head>
         <title>Book Eater</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
     </head>
     <body>
-        <div>
-            <h1><a href="">Book Eater Club</a></h1>
-        </div>
+        <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">BookEaterClub</a>
+    </div>
 
-        <div>
-            <h2><a href="">Test</a></h2>
-            <p>The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness, for he is truly his brother's keeper and the finder of lost children. And I will strike down upon thee with great vengeance and furious anger those who would attempt to poison and destroy My brothers. And you will know My name is the Lord when I lay My vengeance upon thee.
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">News</a></li>
+        <li><a href="#">Books</a></li>
+        <li><a href="#">Us</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
 
-                <div style="display:none;">
-                <a href="http://slipsum.com">lorem ipsum</a>
-                </div>
-            </p>
-        </div>
+{% for post in posts %}
+<div class="panel panel-default">
+  <div class="panel-heading">{{ post.title }}</div>
+  <div class="panel-body">
+    <p>published: {{ post.published_date }}</p>
+    <p>{{ post.text|linebreaks }}</p>
+  </div>
+</div>      
+{% endfor %}
     </body>
 </html>
