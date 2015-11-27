@@ -33,9 +33,11 @@
   <div class="panel-body">
     <p>published: {{ post.published_date }}</p>
     <p>{{ post.text|linebreaks }}</p>
+    <img src="{{post.cover.url}}">
   </div>
 </div>      
 {% endfor %}
+
 </div>
     </body>
 </html>
