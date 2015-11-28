@@ -7,7 +7,6 @@ from django.conf.urls.static import static
 urlpatterns = [
     url(r'^$', views.post_list),
 ]
-
 # if settings.DEBUG:
 #     # static files (images, css, javascript, etc.)
 #     urlpatterns += patterns('',
