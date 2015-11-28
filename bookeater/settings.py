@@ -112,7 +112,7 @@ ALLOWED_HOSTS = ['*']
 
 STATIC_ROOT = 'staticfiles'
 
-MEDIA_URL = '/covers/'
+MEDIA_URL = '/media/'
 
 MEDIA_ROOT = '/home/marcin/Projects/DjangoWebpage/'
 
